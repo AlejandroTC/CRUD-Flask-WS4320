@@ -1,0 +1,63 @@
+{%extends 'layout.html'%}
+{%block body%}
+
+<div class="row">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor%}
+    {% endif%}
+    {% endwith%}
+    <div class="col-md-5">
+        <div class="card card-body">
+            <form action="/add" method="POST">
+                <div class="form-group">
+                    <input type="text" name ="name" placeholder="Nombre" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="text" name ="last_name" placeholder="Apellido" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="date" name ="birth_date" placeholder="Fecha Nacimiento" class="form-control">
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-7">
+        <table class="table table-striped table-bordered bg-white table-sm">
+            <thead>
+                <tr>
+                    <td>id</td>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>Fecha Nacimiento</td>
+                    <td>Operaciones</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in employees %}
+                    <tr>
+                        <td>{{employeses.1}}</td>
+                        <td>{{employeses.2}}</td>
+                        <td>{{employeses.3}}</td>
+                        <td>
+                            <a href="/edit/{{employees.0}}" class="btn btn-secondary">Edit</a>
+                            <a href="/delete/{{employees.0}}" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
