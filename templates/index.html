@@ -46,12 +46,13 @@
             <tbody>
                 {% for employee in employees %}
                     <tr>
-                        <td>{{employeses.1}}</td>
-                        <td>{{employeses.2}}</td>
-                        <td>{{employeses.3}}</td>
+                        <td>{{employee.0}}</td>
+                        <td>{{employee.1}}</td>
+                        <td>{{employee.2}}</td>
+                        <td>{{employee.3}}</td>
                         <td>
-                            <a href="/edit/{{employees.0}}" class="btn btn-secondary">Edit</a>
-                            <a href="/delete/{{employees.0}}" class="btn btn-danger">Delete</a>
+                            <a href="/edit/{{employee.0}}" class="btn btn-secondary">Edit</a>
+                            <a href="/delete/{{employee.0}}" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>
                 {% endfor %}

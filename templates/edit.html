@@ -1,16 +1,16 @@
-{%extends 'layout.html%}
+{%extends 'layout.html'%}
 {%block body%}
 <div class="col-md-4 offset-md-4">
     <div class="card card-body">
         <form action="/update/{{employee.0}}" method="POST">
             <div class="form-group">
-                <input type="text" name ="name" placeholder="Nombre", value="{{employee.1}}">
+                <input type="text" name ="name" placeholder="Nombre", value="{{employee.1}}" class="form-control">
             </div>
             <div class="form-group">
-                <input type="text" name ="last_name" placeholder="Apellido" value="{{employee.2}}">
+                <input type="text" name ="last_name" placeholder="Apellido" value="{{employee.2}}" class="form-control">
             </div>
             <div class="form-group">
-                <input type="date" name ="birth_date" placeholder="Fecha Nacimiento" value="{{employee.3}}">
+                <input type="date" name ="birth_date" placeholder="Fecha Nacimiento" value="{{employee.3}}" class="form-control">
             </div>
             <div class="d-grid">
                 <button type="submit" class="btn btn-primary btn-block">
