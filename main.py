@@ -15,7 +15,7 @@ def getconn() -> pymysql.connections.Connection:
         "sd-atc:us-central1:sd-atc",
         "pymysql",
         user="flask",
-        password="aleadk",
+        password="Uj+-4l=Cqxqh=4U[",
         db="store"
     )
     return conn
