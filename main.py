@@ -150,3 +150,14 @@ def delete_employ(id):
 
 if __name__ == "__main__":
     app.run(port=3000, debug=False)
+
+
+# pip freeze > requirements.txt
+# gcloud auth login
+# gcloud components install app-engine-python
+# gcloud config set project MY-PROJECT-ID
+# gcloud projects create MY-PROJECT-ID --set-as-default
+# gcloud beta billing projects link MY-PROJECT-ID  --billing-account MY-ACCOUNT-ID
+# gcloud services enable cloudbuild.googleapis.com
+# gcloud app create --project=MY-PROJECT-ID
+# gcloud app deploy
