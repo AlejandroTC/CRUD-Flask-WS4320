@@ -5,6 +5,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 # from flask_mysqldb import MySQL
 # pip install pymysql
 # from flask_sqlalchemy import SQLAlchemy
+
 # pip install pymysql
 import pymysql
 
