@@ -20,8 +20,6 @@ app = Flask(__name__)
 connector = Connector()
 
 # function to return the database connection
-
-
 def getconn() -> pymysql.connections.Connection:
     conn: pymysql.connections.Connection = connector.connect(
         "sd-atc:us-central1:sd-atc",
@@ -46,7 +44,7 @@ pool = sqlalchemy.create_engine(
 # app.config['MYSQL_DB'] = 'store'
 # mysql = MySQL(app)
 # Configuración de la conexión a la base de datos de Cloud SQL
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flask:aleadk@10.16.48.4/store'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://flask:Uj+-4l=Cqxqh=4U[@10.16.48.4/store'
 # db = SQLAlchemy(app)
 
 # Settings
